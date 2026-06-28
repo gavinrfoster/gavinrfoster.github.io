@@ -1,0 +1,206 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const publications = [
+  {
+    year: 'Forthcoming',
+    venue: 'Cognition',
+    authors: 'Foster, G. R., & Westra, E.',
+    title: 'Metarepresentation and the puzzle of desire-attribution',
+    tags: ['Theory of Mind', 'Metarepresentation'],
+    link: null,
+  },
+  {
+    year: '2026',
+    venue: 'PLOS ONE 21(2): e0341872',
+    authors: 'Bastos, A. P. M., Foster, G. R., & Krupenye, C.',
+    title: 'Do dogs rationally infer the causes of failed actions?',
+    tags: ['Comparative Cognition', 'Dogs'],
+    link: 'https://doi.org/10.1371/journal.pone.0341872',
+  },
+  {
+    year: '2026',
+    venue: 'Mind (Book Review)',
+    authors: 'Foster, G. R., & Westra, E.',
+    title: 'Review of Acting for Reasons: In Defence of Common-Sense Psychology, by Emma Borg',
+    tags: ['Folk Psychology', 'Book Review'],
+    link: null,
+  },
+  {
+    year: '2025',
+    venue: 'Philosophical Psychology',
+    authors: 'Foster, G. R.',
+    title: 'From Monkeys to Infants: The Empirical Challenges Facing Mental Fictionalism',
+    tags: ['Fictionalism', 'Folk Psychology'],
+    link: 'https://doi.org/10.1080/09515089.2025.2556845',
+  },
+];
+
+const presentations = [
+  { year: 'Apr 2026', title: 'Factive Mindreading and Species of Knowledge', venue: '33rd International Conference on Comparative Cognition', location: 'Montreal, QC', invited: false },
+  { year: 'Feb 2026', title: 'A Pluralistic Account of the Evolutionary Origins of Knowledge Attribution', venue: 'Southern Society for Philosophy and Psychology 2026', location: 'Atlanta, GA', invited: false },
+  { year: 'Feb 2026', title: 'A Pluralistic Account of the Evolutionary Origins of Knowledge Attribution', venue: 'Ruhr-University Bochum & LSE Joint Workshop on Animal Minds', location: 'Bochum, Germany', invited: false },
+  { year: 'Jul 2025', title: 'Desire Without Metarepresentation', venue: 'Society for Philosophy and Psychology 2025 (with E. Westra)', location: 'Ithaca, NY', invited: false },
+  { year: 'Apr 2025', title: 'What Do Monkeys Know About Knowledge?', venue: 'Southern Society for Philosophy and Psychology 2025', location: 'Mobile, AL', invited: false },
+  { year: 'Mar 2025', title: 'Reconsidering Factive Accounts of Monkey Mindreading', venue: '32nd International Conference on Comparative Cognition', location: 'Albuquerque, NM', invited: false },
+  { year: 'Jan 2025', title: 'The Logical Problem of Mindreading: A New Middle-Ground Account', venue: 'The First Annual Association Conference', location: 'Gainesville, FL', invited: false },
+  { year: 'Dec 2024', title: 'Reconsidering Behavioural Accounts of Theory of Mind in Great Apes', venue: '8th Panhellenic Conference on Philosophy of Science', location: 'Athens, Greece', invited: true },
+  { year: 'Nov 2024', title: 'Why Animal Mindreading Undermines Fictionalism about Folk Psychology', venue: 'Workshop on Interpretivism, Mental Fictionalism, and Folk Psychology', location: 'Tartu, Estonia', invited: false },
+  { year: 'Jul 2024', title: 'A New Kantian Model of Animal Representation', venue: 'Society for European Philosophy Conference 2024', location: 'Cardiff, UK', invited: true },
+  { year: 'Jun 2024', title: 'Kant and Evolution: Deciphering Animal Cognition', venue: 'CPA 2024, Canadian Philosophical Association Congress (with A. Brook)', location: 'Montreal, QC', invited: false },
+  { year: 'Aug 2023', title: "Davidson on Animal Minds: Weakening Morgan's Canon", venue: '11th European Conference for Analytic Philosophy', location: 'Vienna, Austria', invited: false },
+  { year: 'Jul 2023', title: 'Davidson and Wittgenstein on Animal Minds: A Pluralistic Approach to Conceptualization', venue: '6th Early Career Researchers Workshop in Philosophy of Mind and Cognitive Science', location: 'Bochum, Germany', invited: false },
+  { year: 'Apr 2023', title: 'Pattern Realism as a Possible Solution to the Logical Problem in Animal Mindreading', venue: 'Carleton Cognitive Science Graduate Conference 2023', location: 'Ottawa, ON', invited: false },
+];
+
+const worksInProgress = [
+  {
+    status: 'In progress',
+    title: 'Bounded Epistemic Kantianism',
+    description: `Develops the groundwork for a bounded, non-consequentialist epistemology that is Kantian in spirit, extending Kantian ideas into the philosophy of inquiry. On the resulting view, which I call Bounded Epistemic Kantianism, it is epistemically rational to adopt a policy (a heuristic, an attention-management strategy, a rule for when to halt inquiry) just in case, in doing so, one respects one's own capacity for reason.`,
+    tags: ['Epistemology', 'Kant', 'Bounded Rationality'],
+  },
+  {
+    status: 'In progress',
+    title: 'Good Beginnings: Kant, Infancy, and the Germs of Morality',
+    description: `Asks how Kant can deny that children are moral beings while holding that moral education cultivates natural predispositions, or "germs for the good." Using a synthetic Kantian method that brings Kant into line with developmental and moral psychology, it argues that children are born neither moral nor evil, but with a pre-conceptual sensitivity to morally significant features that becomes conceptualized as reason develops.`,
+    tags: ['Kant', 'Moral Psychology', 'Development'],
+  },
+  {
+    status: 'In progress',
+    title: 'Norm Psychology Without Third-Party Punishment',
+    description: `Argues, against sceptics, that the apparent absence of third-party punishment among non-human primates is no good reason to deny them a norm psychology. After distinguishing traditions, culture, and social norms, it develops a parity argument: even humans who plainly possess social norms (children, WEIRD adults, and many small-scale societies) rarely engage in third-party punishment, so it should not be the evidential bar for primate normativity.`,
+    tags: ['Norm Psychology', 'Primate Cognition', 'Social Norms'],
+  },
+];
+---
+
+<Layout title="Publications" description="Publications and presentations by Gavin Robert Foster.">
+  <div class="page-hero">
+    <div class="container">
+      <p class="section-label">Scholarship</p>
+      <h1>Publications &amp; Presentations</h1>
+    </div>
+  </div>
+
+  <div class="container page-body">
+
+    <section>
+      <p class="section-label">Peer-Reviewed Publications</p>
+      <div class="card-list">
+        {publications.map(pub => (
+          <div class="card">
+            <p class="card-meta">{pub.year} · {pub.venue}</p>
+            <p class="card-title">
+              {pub.link
+                ? <a href={pub.link} target="_blank" rel="noopener">{pub.title}</a>
+                : pub.title
+              }
+            </p>
+            <p class="card-desc">{pub.authors}</p>
+            <div class="card-tags">
+              {pub.tags.map(tag => <span class="tag">{tag}</span>)}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <hr/>
+
+    <section>
+      <p class="section-label">Works in Progress</p>
+      <div class="card-list">
+        {worksInProgress.map(w => (
+          <div class="card">
+            <p class="card-meta">{w.status}</p>
+            <p class="card-title">{w.title}</p>
+            <p class="card-desc">{w.description}</p>
+            <div class="card-tags">
+              {w.tags.map(tag => <span class="tag">{tag}</span>)}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <hr/>
+
+    <section>
+      <p class="section-label">Selected Conference Presentations &amp; Talks</p>
+      <div class="talk-list">
+        {presentations.map(pres => (
+          <div class="talk">
+            <div class="talk-year">{pres.year}</div>
+            <div class="talk-body">
+              <p class="talk-title">
+                {pres.invited && <span class="invited">Invited</span>}
+                {pres.title}
+              </p>
+              <p class="talk-venue">{pres.venue} · {pres.location}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+  </div>
+</Layout>
+
+<style>
+.page-hero {
+  padding: 4rem 0 3rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-alt);
+}
+.page-hero h1 { margin-top: 0.5rem; }
+.page-body { padding-top: 3.5rem; padding-bottom: 4rem; }
+
+.talk-list { display: flex; flex-direction: column; gap: 1.4rem; }
+.talk {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+.talk-year {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ink-faint);
+  text-align: right;
+  padding-top: 0.15rem;
+}
+.talk-title {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0;
+  line-height: 1.35;
+}
+.talk-venue {
+  font-size: 0.85rem;
+  color: var(--ink-light);
+  margin-top: 0.2rem;
+}
+.invited {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-light);
+  border-radius: 2px;
+  padding: 0.1em 0.45em;
+  vertical-align: middle;
+  margin-right: 0.5em;
+}
+
+@media (max-width: 600px) {
+  .talk { grid-template-columns: 1fr; gap: 0.3rem; }
+  .talk-year { text-align: left; }
+}
+</style>

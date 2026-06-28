@@ -1,0 +1,288 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Gavin Robert Foster">
+
+  <!-- ── Hero ── -->
+  <section class="hero">
+    <div class="container-wide">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="hero-eyebrow">PhD Candidate &middot; Philosophy &middot; Purdue University</p>
+          <h1>Gavin<br/>Robert<br/>Foster</h1>
+          <p class="hero-sub">
+            I work on the evolution and development of social cognition: how humans
+            and other animals come to represent minds, knowledge, and desire. My research
+            spans philosophy of mind and cognitive science, comparative and developmental
+            psychology, and Kant's theoretical philosophy.
+          </p>
+          <div class="hero-links">
+            <a href="/research" class="btn-primary">Research</a>
+            <a href="/publications" class="btn-secondary">Publications</a>
+            <a href="/cv" class="btn-secondary">CV</a>
+          </div>
+          <p class="hero-affil">
+            Affiliate, <span>Social and Cognitive Origins Group</span><br/>
+            Department of Psychology &amp; Brain Sciences, Johns Hopkins University
+          </p>
+        </div>
+        <div class="hero-photo-wrap">
+          <div class="hero-photo">
+            <img src="/photo.jpg" alt="Gavin Robert Foster" />
+          </div>
+          <div class="hero-photo-caption">Purdue University · West Lafayette, IN</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Selected publications ── -->
+  <section class="selected-pubs">
+    <div class="container">
+      <p class="section-label">Selected Publications</p>
+      <div class="card-list">
+
+        <div class="card">
+          <p class="card-meta">Forthcoming · Cognition</p>
+          <p class="card-title">Metarepresentation and the puzzle of desire-attribution</p>
+          <p class="card-desc">Foster, G. R., &amp; Westra, E.</p>
+          <div class="card-tags">
+            <span class="tag">Theory of Mind</span>
+            <span class="tag">Metarepresentation</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <p class="card-meta">2026 · PLOS ONE</p>
+          <p class="card-title"><a href="https://doi.org/10.1371/journal.pone.0341872" target="_blank" rel="noopener">Do dogs rationally infer the causes of failed actions?</a></p>
+          <p class="card-desc">Bastos, A. P. M., Foster, G. R., &amp; Krupenye, C.</p>
+          <div class="card-tags">
+            <span class="tag">Comparative Cognition</span>
+            <span class="tag">Dogs</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <p class="card-meta">2025 · Philosophical Psychology</p>
+          <p class="card-title"><a href="https://doi.org/10.1080/09515089.2025.2556845" target="_blank" rel="noopener">From Monkeys to Infants: The Empirical Challenges Facing Mental Fictionalism</a></p>
+          <p class="card-desc">Foster, G. R.</p>
+          <div class="card-tags">
+            <span class="tag">Fictionalism</span>
+            <span class="tag">Folk Psychology</span>
+          </div>
+        </div>
+
+      </div>
+      <p class="pubs-more"><a href="/publications">All publications &rarr;</a></p>
+    </div>
+  </section>
+
+  <!-- ── Research areas ── -->
+  <section class="areas">
+    <div class="container">
+      <p class="section-label">Research Areas</p>
+      <div class="areas-list">
+        <div class="area-item">
+          <div class="area-num">01</div>
+          <div class="area-content">
+            <h3>Theory of Mind &amp; Mindreading</h3>
+            <p>How humans and other animals attribute knowledge, belief, and desire: the logical problem of mindreading and factive accounts of knowledge attribution in primates.</p>
+          </div>
+        </div>
+        <div class="area-item">
+          <div class="area-num">02</div>
+          <div class="area-content">
+            <h3>Comparative &amp; Developmental Cognition</h3>
+            <p>Empirical and conceptual research on animal minds, from monkeys and great apes to dogs and human infants, including hands-on experimental work in comparative psychology.</p>
+          </div>
+        </div>
+        <div class="area-item">
+          <div class="area-num">03</div>
+          <div class="area-content">
+            <h3>Norm Psychology</h3>
+            <p>Whether non-human primates are genuinely normative creatures. I argue that the absence of third-party punishment among primates is no good reason to deny them a norm psychology, since even humans often sustain social norms without it.</p>
+          </div>
+        </div>
+        <div class="area-item">
+          <div class="area-num">04</div>
+          <div class="area-content">
+            <h3>Bounded Rationality</h3>
+            <p>Groundwork for a bounded epistemic non-consequentialism that is Kantian in spirit, applying Kantian epistemology to the philosophy of inquiry while taking seriously the boundedness of human cognition.</p>
+          </div>
+        </div>
+        <div class="area-item">
+          <div class="area-num">05</div>
+          <div class="area-content">
+            <h3>Kant on Moral Psychology &amp; Education</h3>
+            <p>A "synthetic Kantian" reconstruction of Kant's moral psychology and education, reconciling his account of childhood and moral development with contemporary developmental and moral psychology.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact strip ── -->
+  <section class="contact-strip">
+    <div class="container">
+      <p class="section-label">Get in Touch</p>
+      <p>I'm always happy to discuss research, collaboration, or questions about my work.</p>
+      <p class="contact-email">foste362 AT purdue DOT edu</p>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+/* ── Hero ── */
+.hero {
+  padding: 5rem 0 4rem;
+  border-bottom: 1px solid var(--border);
+}
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4rem;
+  align-items: start;
+}
+.hero-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.25rem;
+}
+.hero h1 {
+  font-size: 4.5rem;
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+.hero-sub {
+  font-size: 1.05rem;
+  color: var(--ink-light);
+  max-width: 480px;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+.hero-links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.hero-affil {
+  font-size: 0.82rem;
+  color: var(--ink-faint);
+  line-height: 1.6;
+  border-left: 2px solid var(--accent-light);
+  padding-left: 0.75rem;
+}
+.hero-affil span { color: var(--accent); }
+
+.hero-photo-wrap { text-align: center; }
+.hero-photo {
+  width: 280px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+.hero-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.hero-photo-caption {
+  font-size: 0.72rem;
+  color: var(--ink-faint);
+  margin-top: 0.6rem;
+  letter-spacing: 0.04em;
+}
+
+/* ── Buttons ── */
+.btn-primary {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.6em 1.4em;
+  border-radius: 2px;
+  transition: background 0.15s;
+}
+.btn-primary:hover { background: var(--ink); color: #fff; text-decoration: none; }
+
+.btn-secondary {
+  display: inline-block;
+  border: 1px solid var(--border);
+  color: var(--ink-light);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.6em 1.4em;
+  border-radius: 2px;
+  transition: border-color 0.15s, color 0.15s;
+}
+.btn-secondary:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+
+/* ── Research areas ── */
+.areas {
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.areas-list { display: flex; flex-direction: column; }
+.area-item {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 1.5rem;
+  padding: 1.35rem 0;
+  border-top: 1px solid var(--border);
+  align-items: baseline;
+}
+.area-item:last-child { border-bottom: 1px solid var(--border); }
+.area-num {
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--accent-light);
+}
+.area-content h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.3rem;
+}
+.area-content p {
+  font-size: 0.9rem;
+  color: var(--ink-light);
+  line-height: 1.6;
+}
+
+/* ── Selected pubs ── */
+.selected-pubs { padding: 4rem 0; border-bottom: 1px solid var(--border); }
+.pubs-more { margin-top: 2rem; font-size: 0.9rem; }
+
+/* ── Contact ── */
+.contact-strip { padding: 4rem 0; }
+.contact-strip p { font-size: 1rem; color: var(--ink-light); margin-bottom: 1.5rem; }
+.contact-strip p.contact-email {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  color: var(--accent);
+  margin-bottom: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 820px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-photo { margin: 0 auto; }
+  .hero h1 { font-size: 3rem; }
+  .area-item { grid-template-columns: 1fr; gap: 0.5rem; padding: 1.5rem 0; }
+  .area-num { font-size: 2.2rem; }
+}
+</style>

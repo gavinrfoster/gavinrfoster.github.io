@@ -1,0 +1,57 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Gavin Robert Foster',
+  description = 'PhD Candidate in Philosophy at Purdue University. Research on social cognition, theory of mind, norm psychology, and Kantian philosophy of mind.'
+} = Astro.props;
+
+const currentPath = Astro.url.pathname;
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/research', label: 'Research' },
+  { href: '/publications', label: 'Publications' },
+  { href: '/cv', label: 'CV' },
+];
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <title>{title === 'Gavin Robert Foster' ? title : `${title} · Gavin Robert Foster`}</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="site-name">Gavin Robert Foster</a>
+      <nav>
+        {navLinks.map(link => (
+          <a
+            href={link.href}
+            class={currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href)) ? 'active' : ''}
+          >
+            {link.label}
+          </a>
+        ))}
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer class="site-footer">
+    <p>Gavin Robert Foster &nbsp;·&nbsp; Purdue University &nbsp;·&nbsp; foste362 AT purdue DOT edu</p>
+  </footer>
+</body>
+</html>
