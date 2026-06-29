@@ -181,3 +181,24 @@ main { min-height: calc(100vh - 56px - 80px); }
   margin-top: 0.4rem;
 }
 .card-tags { margin-top: 0.65rem; display: flex; gap: 0.4rem; flex-wrap: wrap; }
+
+/* ── Mobile ── */
+@media (max-width: 640px) {
+  html { font-size: 17px; }
+
+  .header-inner {
+    flex-direction: column;
+    height: auto;
+    gap: 0.45rem;
+    padding: 0.7rem 1.25rem;
+  }
+  nav { gap: 1.1rem; flex-wrap: wrap; justify-content: center; }
+  nav a { font-size: 0.78rem; letter-spacing: 0.05em; }
+
+  .container, .container-wide { padding: 0 1.25rem; }
+  .site-footer { padding: 1.5rem 1.25rem; margin-top: 3rem; }
+
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.35rem; }
+  hr { margin: 2rem 0; }
+}
